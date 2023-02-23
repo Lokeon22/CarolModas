@@ -54,7 +54,6 @@ export const IconsContainer = styled.div`
 export const Content = styled.section`
   //Section responsavel por agrupar o conteudo dentro do desing - 200px auto 200px
   width: 100%;
-  height: 100%;
 
   padding: 0px 200px;
 
@@ -77,6 +76,8 @@ export const ContentCategory = styled.section`
 `;
 
 export const FilterCategoryContainer = styled.div`
+  position: relative;
+
   width: 100%;
   display: flex;
   justify-content: center;
@@ -84,6 +85,7 @@ export const FilterCategoryContainer = styled.div`
   flex-wrap: wrap;
   gap: 50px;
   margin-bottom: 60px;
+  z-index: 1;
 `;
 
 export const SummerContainer = styled.div`
@@ -106,7 +108,7 @@ export const SummerBgContent = styled.div`
     width: 300px;
     height: 400px;
     position: absolute;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.77);
     top: 17%;
     left: 0;
     right: 0;
@@ -139,4 +141,38 @@ export const SummerCardContainer = styled.div`
     justify-content: center;
     align-items: center;
   }
+`;
+
+export const InstagramIcon = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  img {
+    position: absolute;
+    top: -500px;
+    left: 82%;
+    right: 0;
+    bottom: 0;
+  }
+
+  @media screen and (max-width: 1280px) {
+    img {
+      top: -830px;
+      left: 60%;
+    }
+  }
+`;
+
+export const FallCollection = styled.section`
+  width: 100%;
+  height: 100%;
+  background-color: ${({ theme }) => theme.COLORS.YELLOW_LIGHT_200};
+`;
+
+export const FallContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
 `;

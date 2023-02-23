@@ -5,7 +5,7 @@ export const Container = styled.div`
   gap: 27px;
 
   img {
-    width: 72px;
+    max-width: 67px;
     height: 52px;
   }
 

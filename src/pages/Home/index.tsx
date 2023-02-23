@@ -9,6 +9,9 @@ import {
   SummerContainer,
   SummerBgContent,
   SummerCardContainer,
+  InstagramIcon,
+  FallCollection,
+  FallContainer,
 } from "./style";
 
 import { useGetProducts } from "../../hooks/useGetProducts";
@@ -25,6 +28,8 @@ import money from "../../assets/icons/money.svg";
 import truck from "../../assets/icons/truck.svg";
 import credit from "../../assets/icons/credit.svg";
 import summerbg from "../../assets/summerbg.svg";
+import fallbg from "../../assets/fallbg.svg";
+import instalarge from "../../assets/icons/instaLarge.svg";
 
 export const Home = () => {
   const { produtos, categoria, verao } = useGetProducts();
@@ -115,6 +120,67 @@ export const Home = () => {
         </SummerContainer>
         <Button text="Conferir" />
       </Content>
+      <ContentCategory>
+        <Content>
+          <Title
+            title="Confira nosso "
+            subtitle="Instagram"
+            firstGold="#DEDCCF"
+            secondGold="white"
+          />
+          <FilterCategoryContainer>
+            {categoria.length > 0 ? (
+              categoria.map((produtoCategory) => (
+                <FilterCategoryCard
+                  key={produtoCategory.id}
+                  produto={produtoCategory}
+                />
+              ))
+            ) : (
+              <h2>Carregando...</h2>
+            )}
+            <InstagramIcon>
+              <img src={instalarge} alt="" />
+            </InstagramIcon>
+          </FilterCategoryContainer>
+        </Content>
+      </ContentCategory>
+      <FallCollection>
+        <Content>
+          <Title title="Coleção " subtitle="fall" />
+          <FallContainer>
+            <SummerBgContent>
+              <img src={fallbg} />
+              <div
+                style={{
+                  left: "46.5%",
+                  top: "13%",
+                  backgroundColor: "rgba(0, 0, 0, 0.56)",
+                }}
+              >
+                <h2>
+                  Coleção <span>Outono</span> <br /> Selecionada <br /> A partir
+                  de <br /> <span>R$ 259,90</span>
+                </h2>
+              </div>
+            </SummerBgContent>
+
+            <SummerCardContainer style={{ justifyContent: "end" }}>
+              {verao.length > 0 ? (
+                verao.map((produtoVerao) => (
+                  <FilterCategoryCard
+                    key={produtoVerao.id}
+                    produto={produtoVerao}
+                  />
+                ))
+              ) : (
+                <h2>Carregando...</h2>
+              )}
+            </SummerCardContainer>
+          </FallContainer>
+          <Button text="Conferir" />
+        </Content>
+      </FallCollection>
     </Container>
   );
 };
