@@ -1,14 +1,17 @@
 import { Container } from "./style";
+import { ProdutosProps } from "../../hooks/useGetProducts";
 
-import shoeBlack from "../../assets/shoeBlack.svg";
+type ShoeCardProps = {
+  produto: ProdutosProps;
+};
 
-export const ShoeLargeCard = () => {
+export const ShoeLargeCard = ({ produto }: ShoeCardProps) => {
   return (
     <Container>
-      <img src={shoeBlack} />
+      <img src={produto.photo} alt={produto.name} />
       <div>
-        <h2>Scarpin Preto</h2>
-        <p>R$ 560,00</p>
+        <h2>{produto.name}</h2>
+        <p>R$ {produto.price}</p>
       </div>
     </Container>
   );
