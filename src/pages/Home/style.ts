@@ -57,6 +57,11 @@ export const IconsContainer = styled.div`
     gap: 20px;
     padding: 5px;
   }
+
+  @media screen and (max-width: 340px) {
+    gap: 10px;
+    padding: 4px;
+  }
 `;
 
 export const Content = styled.section`

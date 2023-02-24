@@ -1,8 +1,13 @@
+import { useState } from "react";
+
 import { Container, Content, Menu } from "./style";
+import { MenuMobile } from "../MenuMobile";
 
 import logo from "../../assets/logo.svg";
 
 export const Header = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
   return (
     <Container>
       <Content>
@@ -23,6 +28,7 @@ export const Header = () => {
             </li>
           </ul>
         </Menu>
+        <MenuMobile isVisible={isVisible} setIsVisible={setIsVisible} />
       </Content>
     </Container>
   );
