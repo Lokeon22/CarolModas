@@ -7,11 +7,12 @@ import {
   ContentCategory,
   FilterCategoryContainer,
   SummerContainer,
-  SummerBgContent,
-  SummerCardContainer,
   InstagramIcon,
   FallCollection,
   FallContainer,
+  PostsCardContainer,
+  ContactContainer,
+  FooterContainer,
 } from "./style";
 
 import { useGetProducts } from "../../hooks/useGetProducts";
@@ -22,6 +23,10 @@ import { Title } from "../../components/Title";
 import { ShoeLargeCard } from "../../components/ShoeLargeCard";
 import { Button } from "../../components/Button";
 import { FilterCategoryCard } from "../../components/FilterCategoryCard";
+import { CollectionBanner } from "../../components/CollectionBanner";
+import { PostsCard } from "../../components/PostsCard";
+import { ContactModal } from "../../components/ContactModal";
+import { Footer } from "../../components/Footer";
 
 import scarpins from "../../assets/scarpins.png";
 import money from "../../assets/icons/money.svg";
@@ -95,17 +100,14 @@ export const Home = () => {
       <Content>
         <Title title="Coleção" subtitle="summer" secondGold="#715100" />
         <SummerContainer>
-          <SummerBgContent>
-            <img src={summerbg} />
-            <div>
-              <h2>
-                Moda <span>Praia</span> <br /> Selecionada <br /> A partir de{" "}
-                <br /> <span>R$ 119,90</span>
-              </h2>
-            </div>
-          </SummerBgContent>
+          <CollectionBanner
+            image={summerbg}
+            text1="Moda"
+            text2="Praia"
+            pricegold="119,90"
+          />
 
-          <SummerCardContainer>
+          <section>
             {verao.length > 0 ? (
               verao.map((produtoVerao) => (
                 <FilterCategoryCard
@@ -116,7 +118,7 @@ export const Home = () => {
             ) : (
               <h2>Carregando...</h2>
             )}
-          </SummerCardContainer>
+          </section>
         </SummerContainer>
         <Button text="Conferir" />
       </Content>
@@ -147,25 +149,17 @@ export const Home = () => {
       </ContentCategory>
       <FallCollection>
         <Content>
-          <Title title="Coleção " subtitle="fall" />
+          <Title title="Coleção " subtitle="fall" secondGold="#715100" />
           <FallContainer>
-            <SummerBgContent>
-              <img src={fallbg} />
-              <div
-                style={{
-                  left: "46.5%",
-                  top: "13%",
-                  backgroundColor: "rgba(0, 0, 0, 0.56)",
-                }}
-              >
-                <h2>
-                  Coleção <span>Outono</span> <br /> Selecionada <br /> A partir
-                  de <br /> <span>R$ 259,90</span>
-                </h2>
-              </div>
-            </SummerBgContent>
+            <CollectionBanner
+              image={fallbg}
+              text1="Coleção"
+              text2="Outono"
+              pricegold="259,90"
+              color="true"
+            />
 
-            <SummerCardContainer style={{ justifyContent: "end" }}>
+            <section>
               {verao.length > 0 ? (
                 verao.map((produtoVerao) => (
                   <FilterCategoryCard
@@ -176,11 +170,30 @@ export const Home = () => {
               ) : (
                 <h2>Carregando...</h2>
               )}
-            </SummerCardContainer>
+            </section>
           </FallContainer>
           <Button text="Conferir" />
         </Content>
       </FallCollection>
+      <Content>
+        <Title title="Últimas " subtitle="Postagens" secondGold="#715100" />
+        <PostsCardContainer>
+          <PostsCard />
+          <PostsCard />
+          <PostsCard />
+        </PostsCardContainer>
+      </Content>
+      <ContactContainer>
+        <Content>
+          <Title title="Contato" subtitle="" />
+          <ContactModal />
+        </Content>
+      </ContactContainer>
+      <FooterContainer>
+        <Content>
+          <Footer />
+        </Content>
+      </FooterContainer>
     </Container>
   );
 };
