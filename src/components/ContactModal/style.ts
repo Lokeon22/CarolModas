@@ -13,6 +13,15 @@ export const Container = styled.section`
     color: black;
     margin-bottom: 60px;
   }
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 40px;
+
+    p {
+      font-size: 13px;
+      margin-bottom: 30px;
+    }
+  }
 `;
 
 export const Content = styled.div`
@@ -111,6 +120,15 @@ export const Content = styled.div`
       :hover {
         opacity: 0.9;
         transition: all 0.4s ease;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      gap: 20px;
+
+      > div {
+        flex-direction: column;
+        gap: 20px;
       }
     }
   }

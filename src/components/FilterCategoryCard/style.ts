@@ -27,4 +27,11 @@ export const Container = styled.div`
     #dddddd 41.3%,
     #b1b1b1 89.62%
   );
+
+  @media screen and (max-width: 768px) {
+    max-width: 250px;
+    max-height: 250px;
+    gap: 30px;
+    padding: 30px;
+  }
 `;

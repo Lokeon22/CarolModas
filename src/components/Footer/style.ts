@@ -17,6 +17,7 @@ export const Container = styled.section`
 
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
+    margin: 40px 0px;
   }
 `;
 
@@ -29,6 +30,10 @@ export const Logo = styled.div`
     max-width: 55ch;
     color: ${({ theme }) => theme.COLORS.YELLOW_LIGHT_200};
     letter-spacing: 0.5px;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
   }
 `;
 

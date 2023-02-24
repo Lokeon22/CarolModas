@@ -28,4 +28,9 @@ export const Container = styled.div`
       transition: all 0.4s ease;
     }
   }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
 `;

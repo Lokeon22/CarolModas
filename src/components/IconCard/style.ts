@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 27px;
 
   img {
@@ -30,5 +32,31 @@ export const Container = styled.div`
 
   @media screen and (max-width: 1000px) {
     gap: 10px;
+  }
+
+  @media screen and (max-width: 768px) {
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+
+    div {
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+
+      h2 {
+        font-size: 14px;
+      }
+
+      p {
+        font-size: 12px;
+      }
+    }
   }
 `;

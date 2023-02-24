@@ -31,4 +31,24 @@ export const Container = styled.div`
       }
     }
   }
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+    img {
+      width: 90%;
+    }
+
+    div {
+      width: 200px;
+      height: 250px;
+
+      h2 {
+        font-size: 22px;
+      }
+    }
+  }
 `;

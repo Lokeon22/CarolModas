@@ -5,6 +5,10 @@ export const Container = styled.div`
   height: 100%;
   margin-bottom: 60px;
 
+  img {
+    width: 100%;
+  }
+
   div {
     display: flex;
     flex-direction: column;
@@ -29,6 +33,15 @@ export const Container = styled.div`
       font-size: ${({ theme }) => theme.TYPOGRAPHY.BUTTON};
       font-weight: 400;
       letter-spacing: 0.25px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    max-width: 300px;
+    margin-bottom: 30px;
+
+    img {
+      width: 100%;
     }
   }
 `;

@@ -49,6 +49,14 @@ export const IconsContainer = styled.div`
   @media screen and (max-width: 1000px) {
     gap: 20px;
   }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: 150px;
+
+    gap: 20px;
+    padding: 5px;
+  }
 `;
 
 export const Content = styled.section`
@@ -64,6 +72,10 @@ export const Content = styled.section`
   @media screen and (max-width: 1280px) {
     padding: 0px 50px;
   }
+
+  @media screen and (max-width: 768px) {
+    padding: 0 10px;
+  }
 `;
 
 export const ShoeCardContainer = styled.section`
@@ -72,6 +84,11 @@ export const ShoeCardContainer = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   // quebra pro mobile
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
 `;
 
 export const ContentCategory = styled.section`
@@ -90,6 +107,11 @@ export const FilterCategoryContainer = styled.div`
   gap: 50px;
   margin-bottom: 60px;
   z-index: 1;
+
+  @media screen and (max-width: 768px) {
+    gap: 30px;
+    margin-bottom: 40px;
+  }
 `;
 
 export const SummerContainer = styled.div`
@@ -135,6 +157,10 @@ export const InstagramIcon = styled.div`
       left: 60%;
     }
   }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const FallCollection = styled.section`
@@ -175,6 +201,10 @@ export const PostsCardContainer = styled.div`
   align-items: center;
   flex-wrap: wrap;
   gap: 50px;
+
+  @media screen and (max-width: 768px) {
+    gap: 25px;
+  }
 `;
 
 export const ContactContainer = styled.section`

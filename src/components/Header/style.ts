@@ -10,6 +10,10 @@ export const Container = styled.div`
   align-items: center;
 
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+
+  @media screen and (max-width: 768px) {
+    padding: 5px;
+  }
 `;
 
 export const Content = styled.div`
@@ -28,6 +32,10 @@ export const Content = styled.div`
 
   @media screen and (max-width: 1300px) {
     padding: 0px 50px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 5px;
   }
 `;
 

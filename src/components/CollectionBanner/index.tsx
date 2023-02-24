@@ -18,7 +18,7 @@ export const CollectionBanner = ({
   return (
     <Container>
       <img src={image} />
-      <div style={{ left: color ? "46.5%" : "0", top: color ? "13%" : "17%" }}>
+      <div style={{ left: color ? "37%" : "0", top: color ? "13%" : "17%" }}>
         <h2>
           {text1}{" "}
           <span style={{ color: color ? "#AC7C00" : "#EAD413" }}>{text2}</span>{" "}

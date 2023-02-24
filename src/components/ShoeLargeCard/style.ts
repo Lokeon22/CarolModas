@@ -37,4 +37,23 @@ export const Container = styled.div`
       color: ${({ theme }) => theme.COLORS.GRAY_300};
     }
   }
+
+  @media screen and (max-width: 768px) {
+    width: 80%;
+    max-width: 300px;
+    max-height: 300px;
+    padding: 10px;
+    margin: 0 auto;
+
+    img {
+      width: 125px;
+    }
+
+    div {
+      h2 {
+        margin-top: 15px;
+        margin-bottom: 0px;
+      }
+    }
+  }
 `;
