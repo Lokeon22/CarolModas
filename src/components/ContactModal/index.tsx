@@ -1,5 +1,7 @@
 import { Container, Content, IconsContainer } from "./style";
 
+import { ContactEmail } from "../ContactEmail";
+
 import phone from "../../assets/icons/phone.svg";
 import email from "../../assets/icons/email.svg";
 import time from "../../assets/icons/time.svg";
@@ -38,16 +40,7 @@ export const ContactModal = () => {
             </div>
           </IconsContainer>
         </div>
-
-        <form action="#">
-          <div>
-            <input type="text" placeholder="Nome" />
-            <input type="text" placeholder="Email" />
-          </div>
-          <input type="text" placeholder="Assunto" />
-          <textarea name="" placeholder="Mensagem" />
-          <button type="submit">Enviar</button>
-        </form>
+        <ContactEmail />
       </Content>
     </Container>
   );
