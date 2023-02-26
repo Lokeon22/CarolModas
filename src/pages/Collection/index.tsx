@@ -1,3 +1,3 @@
 export const Collection = () => {
-  return <div></div>;
+  return <div>Pagina coleção</div>;
 };

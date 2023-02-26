@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import { Container, Content, Menu } from "./style";
 import { MenuMobile } from "../MenuMobile";
@@ -11,7 +12,9 @@ export const Header = () => {
   return (
     <Container>
       <Content>
-        <img src={logo} alt="logo carol modas" />
+        <Link to={"/"}>
+          <img src={logo} alt="logo carol modas" />
+        </Link>
         <Menu>
           <ul>
             <li>
