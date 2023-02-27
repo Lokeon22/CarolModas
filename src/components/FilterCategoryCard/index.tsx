@@ -1,11 +1,11 @@
 import { Container } from "./style";
-import { ProdutosProps } from "../../hooks/useGetProducts";
+import { ImagesShoesProps } from "../../models/index";
 
-type CategoryCardProps = {
-  produto: ProdutosProps;
+type ProdutoProps = {
+  produto: ImagesShoesProps;
 };
 
-export const FilterCategoryCard = ({ produto }: CategoryCardProps) => {
+export const FilterCategoryCard = ({ produto }: ProdutoProps) => {
   //H2 style, ajuste apenas para adequar tamanho da imagem de teste
 
   return (

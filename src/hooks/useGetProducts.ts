@@ -1,17 +1,11 @@
 import { useEffect, useState } from "react";
 import { products, category, summer } from "../services/fakeCMS";
-
-export type ProdutosProps = {
-  id: number;
-  name: string;
-  price?: string;
-  photo: string;
-};
+import { ProdutosProps, ImagesShoesProps } from "../models";
 
 export function useGetProducts() {
   const [produtos, setProdutos] = useState<ProdutosProps[]>([]);
-  const [categoria, setCategoria] = useState<ProdutosProps[]>([]);
-  const [verao, setVerao] = useState<ProdutosProps[]>([]);
+  const [categoria, setCategoria] = useState<ImagesShoesProps[]>([]);
+  const [verao, setVerao] = useState<ImagesShoesProps[]>([]);
 
   useEffect(() => {
     setProdutos(products);

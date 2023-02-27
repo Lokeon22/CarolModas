@@ -1,3 +1,5 @@
+import { useGetProducts } from "../../hooks/useGetProducts";
+
 import {
   Container,
   PromotionBanner,
@@ -14,8 +16,6 @@ import {
   ContactContainer,
   FooterContainer,
 } from "./style";
-
-import { useGetProducts } from "../../hooks/useGetProducts";
 
 import { IconCard } from "../../components/IconCard";
 import { Header } from "../../components/Header";

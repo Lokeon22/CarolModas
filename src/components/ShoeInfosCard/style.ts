@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const Container = styled.div`
   max-width: 1000px;
   height: 100%;
-  padding-top: 110px;
+  padding-top: 100px;
+  margin: 0 auto;
 
   display: flex;
   justify-content: center;
@@ -12,6 +13,14 @@ export const Container = styled.div`
   @media screen and (max-width: 1000px) {
     padding-top: 0px;
     gap: 20px;
+  }
+
+  @media screen and (max-width: 768px) {
+    max-width: fit-content;
+    height: 100%;
+    flex-direction: column;
+    padding: 0px 10px;
+    margin: 0 auto;
   }
 `;
 
@@ -35,6 +44,15 @@ export const ShoeImage = styled.div`
 
     img {
       max-width: 300px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding: 25px 30px;
+
+    img {
+      width: 100%;
     }
   }
 `;
@@ -92,9 +110,11 @@ export const ShoeInfos = styled.div`
   }
 
   span {
+    max-width: 35ch;
     font-family: "Roboto", sans-serif;
     font-size: ${({ theme }) => theme.TYPOGRAPHY.DEFAULT};
     color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+    font-weight: 500;
     line-height: 19px;
     letter-spacing: 0.5px;
   }
@@ -114,5 +134,8 @@ export const ShoeInfos = styled.div`
     span {
       font-size: 14px;
     }
+  }
+
+  @media screen and (max-width: 768px) {
   }
 `;
