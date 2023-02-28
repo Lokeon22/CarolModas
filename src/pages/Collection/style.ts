@@ -19,13 +19,6 @@ export const TitlesCollection = styled.div`
     margin-bottom: 60px;
   }
 
-  h3 {
-    font-size: ${({ theme }) => theme.TYPOGRAPHY.TITLE_2};
-    color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
-    font-weight: 400;
-    margin-bottom: 80px;
-  }
-
   span {
     background-clip: initial;
     background: linear-gradient(
@@ -46,15 +39,34 @@ export const TitlesCollection = styled.div`
       font-size: 30px;
       margin-bottom: 15px;
     }
-
-    h3 {
-      font-size: 25px;
-      margin-bottom: 40px;
-    }
   }
 `;
 
-export const SummerContainer = styled.div`
+export const TitleSeason = styled.h3`
+  font-size: ${({ theme }) => theme.TYPOGRAPHY.TITLE_2};
+  color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+  font-weight: 400;
+  margin-bottom: 80px;
+
+  span {
+    background-clip: initial;
+    background: linear-gradient(
+      to left,
+      rgb(86, 76, 48),
+      rgb(204, 182, 122),
+      rgb(214, 206, 184)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 25px;
+    margin-bottom: 40px;
+  }
+`;
+
+export const SeasonContainer = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
