@@ -18,16 +18,16 @@ export const Header = () => {
         <Menu>
           <ul>
             <li>
-              <a href="#">Novidades</a>
+              <Link to={"/"}>Novidades</Link>
             </li>
             <li>
-              <a href="#">Coleções</a>
+              <Link to="/collection">Coleções</Link>
             </li>
             <li>
-              <a href="#">Categorias</a>
+              <Link to={"/"}>Categorias</Link>
             </li>
             <li>
-              <a href="#">Blog</a>
+              <Link to={"/"}>Blog</Link>
             </li>
           </ul>
         </Menu>

@@ -39,8 +39,8 @@ export const Container = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    width: 80%;
-    max-width: 300px;
+    width: 100%;
+    max-width: 100%;
     max-height: 300px;
     padding: 10px;
     margin: 0 auto;

@@ -67,7 +67,6 @@ export const IconsContainer = styled.div`
 export const Content = styled.section`
   //Section responsavel por agrupar o conteudo dentro do desing - 200px auto 200px
   width: 100%;
-
   padding: 0px 200px;
 
   @media screen and (max-width: 1500px) {
@@ -91,8 +90,7 @@ export const ShoeCardContainer = styled.section`
   // quebra pro mobile
 
   @media screen and (max-width: 768px) {
-    grid-template-columns: 1fr;
-    gap: 10px;
+    grid-template-columns: 1fr 1fr;
   }
 `;
 

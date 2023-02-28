@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { MenuClose, MenuOpen } from "./style";
 
 import burguer from "../../assets/icons/socials/burguer.svg";
@@ -19,10 +20,10 @@ export const MenuMobile = ({ isVisible, setIsVisible }: MenuProps) => {
       <MenuOpen style={{ display: isVisible ? "flex" : "none" }}>
         <img src={close} onClick={() => setIsVisible(false)} />
         <nav>
-          <a href="#">Novidades</a>
-          <a href="#">Coleções</a>
-          <a href="#">Categorias</a>
-          <a href="#">Blog</a>
+          <Link to={"/"}>Novidades</Link>
+          <Link to={"/collection"}>Coleções</Link>
+          <Link to={"/"}>Categorias</Link>
+          <Link to={"/"}>Blog</Link>
         </nav>
       </MenuOpen>
     </MenuClose>
